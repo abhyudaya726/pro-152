@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="base.js"></script>
+        <script src="car_engine.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-sky color="grey"></a-sky>
+            <a-camera position="0 9 50"></a-camera>
+            <a-asset>
+                <a-asset-item id="car-obj" src="./car/tinker.obj"></a-asset-item>
+                <a-asset-item id="car-mtl" src="./car/obj.mtl"></a-asset-item>
+            </a-asset>
+            <a-entity obj-model="obj:#car-obj ; mtl:#car-mtl" position="0 1.5 0" scale="0.3 0.3 0.3" rotation="270 0 0" car></a-entity>
+            <a-entity base></a-entity>
+        </a-scene>
+    </body>
+</html>
